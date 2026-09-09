@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Pulseritas Nury Costa Rica">
+
+    <title>Pulseritas Nury Costa Rica</title>
+
+    <!-- CSS EXTERNO -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- SUPABASE -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+</head>
+
+<body>
+
+<!-- =========================================
+     PROTECCIÓN BÁSICA
+     ========================================= -->
+
+<script>
+
+    // Desactivar click derecho
+    document.addEventListener("contextmenu", function(e) {
+        e.preventDefault();
+    });
+
+    // Desactivar algunas teclas de inspección
+    document.onkeydown = function(e) {
+
+        if (e.keyCode === 123) {
+            return false;
+        }
+
+        if (
+            e.ctrlKey &&
+            e.shiftKey &&
+            e.keyCode === 73
+        ) {
+            return false;
+        }
+
+        if (
+            e.ctrlKey &&
+            e.shiftKey &&
+            e.keyCode === 74
+        ) {
+            return false;
+        }
+
+        if (
+            e.ctrlKey &&
+            e.keyCode === 85
+        ) {
+            return false;
+        }
+
+    };
+
+    // Desactivar arrastrar
+    document.addEventListener("dragstart", function(e) {
+        e.preventDefault();
+    });
+
+    // Desactivar selección
+    document.onselectstart = function() {
+        return false;
+    };
+
+</script>
+
+
+<!-- =========================================
+     ENCABEZADO
+     ========================================= -->
+
+<header>
+
+    <h1>
+        ✨ Pulseritas Nury Costa Rica ✨
+    </h1>
+
+    <p>
+        Hechas con amor, para brillar siempre
+    </p>
+
+</header>
+
+
+<!-- =========================================
+     IMAGEN PRINCIPAL
+     ========================================= -->
+
+<div class="separator">
+
+    <img
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhT7giiExqeVGeFJqXGAZyPYPb0LSyUs02q6rLaVRcTNlkIf22kd5UcFDeolttOzHTP0WP6ZmIgnKDzJvo_gZ8mUVH89USfj1beTWbDOVwr5ylHsfo2Ab3BYwFvbqZdQeueZaatbsGGZyDLiXJvazgKOVJ-HW6sTp7QJt0aRfMFJ2gTXbdoZBlAVUkbb6o/s320/Copilot_20260626_133445.png"
+
+        alt="Pulseritas Nury Costa Rica"
+
+        width="320"
+
+        loading="lazy">
+
+</div>
+
+
+<!-- =========================================
+     PRODUCTOS
+     ========================================= -->
+
+<main>
+
+<section class="productos">
+
+
+<!-- PRODUCTO 1 -->
+
+<article class="producto">
+
+    <div class="separator">
+
+        <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKkYwwiTyFJCj6weghyphenhyphenhhCnxLrEhc38QSzQ87X1fnHqMFuORClJc9nNU4pHhpvgZu7Sn2yEcYiIhugAtn0P6avBPtGGGHpNgItEkOrpDm7f6bgw_gWZYOKl6Torc1dw1rFfsZ935cZfkJwsNCagezwK2TbFnO7sU2SdZmFIWjO1w9OFkGoItJM4UjK2T8/s320/Pulsera%20ojo%20de%20tigre%20.jpeg"
+
+            alt="Pulsera piedra ojo de tigre"
+
+            width="320"
+
+            loading="lazy">
+
+    </div>
+
+    <span class="nombre">
+        Pulsera piedra ojo de tigre
+    </span>
+
+    <br>
+
+    <span class="descripcion">
+        Pulsera con piedra ojo de tigre,
+        incluye bolsa de regalo.
+    </span>
+
+    <br>
+
+    <span
+        class="precio"
+        data-precio="5000">
+
+        CRC 5,000.00
+
+    </span>
+
+    <br>
+
+    <button class="boton">
+        Agregar
+    </button>
+
+</article>
+
+
+<!-- PRODUCTO 2 -->
+
+<article class="producto">
+
+    <div class="separator">
+
+        <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiAWVikMhcT5J0MSFKgHYSck3EYhY5fcZ8F1h0KLGY8g7al7I21gotdlE7-5HYu0XDVkyGWSKZ2zkfCfDOwn5X_hecVmQ8Gh22zy9EAbUNa1zXBNikK3e7VbDumZrw0VfrOOndw9EE0Slagcz7nKw8lte0WQpGQg5tthokMbCCR_NG9FEzvsSh1kAUQFXU/s320/Pulsera%20Echa%20a%20mano%20.jpeg"
+
+            alt="Pulsera hecha a mano"
+
+            width="320"
+
+            loading="lazy">
+
+    </div>
+
+    <span class="nombre">
+        Pulsera hecha a mano
+    </span>
+
+    <br>
+
+    <span class="descripcion">
+        Pulsera artesanal ajustable,
+        elaborada a mano.
+    </span>
+
+    <br>
+
+    <span
+        class="precio"
+        data-precio="6000">
+
+        CRC 6,000.00
+
+    </span>
+
+    <br>
+
+    <button class="boton">
+        Agregar
+    </button>
+
+</article>
+
+
+<!-- PRODUCTO 3 -->
+
+<article class="producto">
+
+    <div class="separator">
+
+        <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhW4Fr19aTXTdsR2hs2RJS8zia09aEt9HWfihdQEb2UnmIUAUO1ohgslDftTQuDboLytRXWQUYW-GM7ZjHEgDmtx-DoMroq5lAmcdCXYqKikNxBbIrAd2OtJ-VJHf03XkIUnclJNCnpEYIUA9tlDtcpFvngTQMygYTlzo1iBujCbpsl1LmFEGZJEik9_dA/s320/Pulsera%20mano%20de%20tigre%20.jpeg"
+
+            alt="Pulsera ágata"
+
+            width="320"
+
+            loading="lazy">
+
+    </div>
+
+    <span class="nombre">
+        Pulsera ágata
+    </span>
+
+    <br>
+
+    <span class="descripcion">
+        Pulsera elástica con piedras
+        naturales ágata.
+    </span>
+
+    <br>
+
+    <span
+        class="precio"
+        data-precio="5000">
+
+        CRC 5,000.00
+
+    </span>
+
+    <br>
+
+    <button class="boton">
+        Agregar
+    </button>
+
+</article>
+
+
+<!-- PRODUCTO 4 -->
+
+<article class="producto">
+
+    <div class="separator">
+
+        <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi0gwVnci2lvD3TB-LvVyvF7Vs1YDibEx6nhrW74yEwAtT7A2jyLY5YNfL2D76HHh0qY8uoYX0cAX2ErE-KzDJs_c2h5Ry_u2LH4kIDHR6HZPMFlQiiF-lz1xHSFZhmdzgIPYDEBkzR4mvpJPF0NWChtnZg7eD3XrOpscbTFz01O0im0HOJfymeCpRSAtw/s320/Pulsera%20de%20piedra%20natural%20%28de%20la%20suerte%29.jpeg"
+
+            alt="Pulsera de piedra natural"
+
+            width="320"
+
+            loading="lazy">
+
+    </div>
+
+    <span class="nombre">
+        Pulsera de piedra natural
+        (de la suerte)
+    </span>
+
+    <br>
+
+    <span class="descripcion">
+        Jade, obsidiana, cuarzo cristal,
+        amatista, entre otros.
+    </span>
+
+    <br>
+
+    <span
+        class="precio"
+        data-precio="5000">
+
+        CRC 7,500
+
+    </span>
+
+    <br>
+
+    <button class="boton">
+        Agregar
+    </button>
+
+</article>
+
+
+<!-- PRODUCTO 5 -->
+
+<article class="producto">
+
+    <div class="separator">
+
+        <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj84wifK7yjLeBbX50TR3XnFJ1oD2PS2cmOfGBv8KilJiV2LRXsV7t8bhQRX7wmy4pzB1yD4ILE2hrXstn_ybEcYgH3EVenLmHJWs2OXSrWAx_6C9qMmSi3p6YmAcMz3PH3veUheCA4aDwRwIr8m_l9LR_s9a9DHn2fSVLGydVlgMvCkvzQVpZTSoplnU4/s320/Pulsera%20de%20obsidiana%20negra%20.jpeg"
+
+            alt="Pulsera de obsidiana negra"
+
+            width="320"
+
+            loading="lazy">
+
+    </div>
+
+    <span class="nombre">
+        Pulsera de obsidiana negra
+    </span>
+
+    <br>
+
+    <span class="descripcion">
+        de (protección)
+    </span>
+
+    <br>
+
+    <span
+        class="precio"
+        data-precio="5000">
+
+        CRC 5,000.00
+
+    </span>
+
+    <br>
+
+    <button class="boton">
+        Agregar
+    </button>
+
+</article>
+
+
+<!-- PRODUCTO 6 -->
+
+<article class="producto">
+
+    <div class="separator">
+
+        <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhk4Bcqi8UQo8snIuh9elpi5r5v-LBUqXsXrM9qYT_yttFuW1VOiJVc6XPvOjP2RrjQVm4EG1BYKsxw7aiobO-Kp99VuYMPQhR2T-5hdNWpxrm-p27QeK7rBw6DntnNpdXfzXzVpDSaieDRQKbvPp6TY4Vplas2980ICe-eMUc8Aql0GT9WCoUK0LJmwxE/s320/Pulsera%20roja%20,%20%28para%20traer%20la%20suerte%29.jpeg"
+
+            alt="Pulsera roja"
+
+            width="320"
+
+            loading="lazy">
+
+    </div>
+
+    <span class="nombre">
+        Pulsera roja,
+        (para traer la suerte)
+    </span>
+
+    <br>
+
+    <span class="descripcion">
+        para traer la suerte
+    </span>
+
+    <br>
+
+    <span
+        class="precio"
+        data-precio="5000">
+
+        CRC 5,000.00
+
+    </span>
+
+    <br>
+
+    <button class="boton">
+        Agregar
+    </button>
+
+</article>
+
+</section>
+
+
+<!-- =========================================
+     CARRITO
+     ========================================= -->
+
+<section id="carrito">
+
+    <h2>
+        🛒 Agregar al Carrito
+    </h2>
+
+    <div id="lista-carrito"></div>
+
+    <div class="total">
+
+        Total: CRC
+
+        <span id="total">
+            0.00
+        </span>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     FORMULARIO DE PAGO
+     ========================================= -->
+
+<form
+    action="https://formsubmit.co/nuriesbadilla@gmail.com"
+    method="POST">
+
+    <!-- CONFIGURACIÓN -->
+
+    <input
+        type="hidden"
+        name="_captcha"
+        value="false">
+
+    <input
+        type="hidden"
+        name="_template"
+        value="table">
+
+    <input
+        type="hidden"
+        name="_subject"
+        value="💳 Nueva respuesta de pago">
+
+    <input
+        type="hidden"
+        name="_autoresponse"
+        value="Gracias por indicar tu método de pago">
+
+
+    <fieldset>
+
+        <legend>
+            ¿Cuál método de pago prefieres?
+        </legend>
+
+        <label>
+
+            <input
+                type="radio"
+                name="pago"
+                value="Efectivo"
+                required>
+
+            Efectivo
+
+        </label>
+
+        <br>
+
+        <label>
+
+            <input
+                type="radio"
+                name="pago"
+                value="Sinpe Móvil">
+
+            Sinpe Móvil |
+            Número: 88542484
+
+        </label>
+
+    </fieldset>
+
+
+    <p>
+
+        Para más información sobre el pago
+        puedes comunicarte a este número:
+
+        <br>
+
+        <a
+            href="https://wa.me/50688542484"
+            target="_blank">
+
+            Enviar mensaje por WhatsApp
+
+        </a>
+
+    </p>
+
+
+    <button type="submit">
+        Enviar
+    </button>
+
+</form>
+
+</main>
+
+
+<!-- =========================================
+     IMAGEN FINAL
+     ========================================= -->
+
+<div class="separator">
+
+    <img
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi_lhi1Ie185x-zH2cbBtagh-wNqXfYg7wf_BUPsk4EvgueyY-5ZXRC09xGh-_yPCKVrKtuVCrNE2Rsxwr83DC_uea2C4JRecSF4VgAXP9ZmBQV2j2mR7a3OCuUW2lxaHYKQKEoQd-YvbcJGU3FxSgcV3pOSEEMTd0leQj1KS5txQvKUqAh4FeJ8799w7E/s320/Pulseritas%20Nury%2002.jpeg"
+
+        alt="Pulseritas Nury Costa Rica"
+
+        width="320"
+
+        loading="lazy">
+
+</div>
+
+
+<!-- =========================================
+     FOOTER
+     ========================================= -->
+
+<footer class="footer">
+
+    <p>
+        Derechos de Privacidad |
+        Pulseritas Nury Costa Rica
+    </p>
+
+</footer>
+
+
+<!-- =========================================
+     SUPABASE
+     ========================================= -->
+
+<script>
+
+    const SUPABASE_URL =
+        "https://uuaermkmcgxxggtpyqdt.supabase.co";
+
+    const SUPABASE_KEY =
+        "sb_publishable_TeViFngE7DX2fsJOKWZo9w_psXsmCc1";
+
+    const supabaseClient =
+        window.supabase.createClient(
+            SUPABASE_URL,
+            SUPABASE_KEY
+        );
+
+
+    // Leer datos de Supabase
+
+    async function leerPulseritas() {
+
+        const { data, error } =
+            await supabaseClient
+                .from("Pulseritas Nury")
+                .select("*");
+
+        if (error) {
+
+            console.error(
+                "Error:",
+                error
+            );
+
+        } else {
+
+            console.log(
+                "Datos:",
+                data
+            );
+
+        }
+
+    }
+
+    leerPulseritas();
+
+</script>
+
+
+<!-- =========================================
+     CARRITO JAVASCRIPT
+     ========================================= -->
+
+<script>
+
+    const botones =
+        document.querySelectorAll(
+            ".producto .boton"
+        );
+
+    const listaCarrito =
+        document.getElementById(
+            "lista-carrito"
+        );
+
+    const totalSpan =
+        document.getElementById(
+            "total"
+        );
+
+    let total = 0;
+
+
+    botones.forEach(
+        boton => {
+
+            boton.addEventListener(
+                "click",
+                () => {
+
+                    const producto =
+                        boton.closest(
+                            ".producto"
+                        );
+
+
+                    const nombre =
+                        producto
+                            .querySelector(
+                                ".nombre"
+                            )
+                            .textContent
+                            .trim();
+
+
+                    const precio =
+                        parseFloat(
+                            producto
+                                .querySelector(
+                                    ".precio"
+                                )
+                                .getAttribute(
+                                    "data-precio"
+                                )
+                        ) || 0;
+
+
+                    const item =
+                        document.createElement(
+                            "div"
+                        );
+
+
+                    item.textContent =
+                        `${nombre} - CRC ${precio.toLocaleString("es-CR")}`;
+
+
+                    listaCarrito.appendChild(
+                        item
+                    );
+
+
+                    total += precio;
+
+
+                    totalSpan.textContent =
+                        total.toLocaleString(
+                            "es-CR",
+                            {
+                                minimumFractionDigits: 2
+                            }
+                        );
+
+                }
+            );
+
+        }
+    );
+
+</script>
+
+
+<!-- =========================================
+     CONTADOR DE VISITAS
+     ========================================= -->
+
+<script>
+
+    let visitas =
+        localStorage.getItem(
+            "contadorVisitas"
+        );
+
+
+    if (!visitas) {
+
+        visitas = 1;
+
+    } else {
+
+        visitas =
+            parseInt(visitas) + 1;
+
+    }
+
+
+    localStorage.setItem(
+        "contadorVisitas",
+        visitas
+    );
+
+
+    console.log(
+        "Visitas:",
+        visitas
+    );
+
+</script>
+
+
+</body>
+</html>

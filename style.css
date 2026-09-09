@@ -1,0 +1,334 @@
+/* =========================================
+   PULSERITAS NURY COSTA RICA
+   ARCHIVO: style.css
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #ffe4e1, #ffcce0);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+    /* Evitar selección de texto */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* =========================================
+   ENCABEZADO
+   ========================================= */
+
+header {
+    background-color: #ff69b4;
+    color: white;
+    padding: 20px;
+
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   PRODUCTOS
+   ========================================= */
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 20px;
+}
+
+.producto {
+    background: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    margin: 10px auto;
+    padding: 15px;
+
+    width: 320px;
+}
+
+.producto img {
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+}
+
+.nombre {
+    display: inline-block;
+
+    font-weight: bold;
+    color: #ff69b4;
+
+    font-size: 18px;
+
+    margin-top: 10px;
+}
+
+.descripcion {
+    display: inline-block;
+
+    font-size: 14px;
+    color: #555;
+
+    margin-top: 5px;
+}
+
+.precio {
+    display: inline-block;
+
+    font-size: 16px;
+    color: #333;
+
+    margin: 8px 0;
+}
+
+/* =========================================
+   BOTONES
+   ========================================= */
+
+.boton {
+    background-color: #ff69b4;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 15px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.boton:hover {
+    background-color: #ff85c1;
+    transform: scale(1.03);
+}
+
+/* =========================================
+   CARRITO
+   ========================================= */
+
+#carrito {
+    background: #fff0f5;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    margin: 20px auto;
+
+    width: 350px;
+    max-width: calc(100% - 30px);
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#carrito h2 {
+    margin-top: 0;
+}
+
+#lista-carrito {
+    margin: 15px 0;
+}
+
+#lista-carrito div {
+    padding: 8px;
+
+    border-bottom: 1px solid #ffcce0;
+}
+
+.total {
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: #333;
+
+    margin-top: 15px;
+}
+
+/* =========================================
+   FORMULARIO DE PAGO
+   ========================================= */
+
+form {
+    background: white;
+
+    width: 350px;
+    max-width: calc(100% - 30px);
+
+    margin: 20px auto;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: 1px solid #ff69b4;
+
+    border-radius: 10px;
+
+    padding: 15px;
+}
+
+legend {
+    color: #ff69b4;
+
+    font-weight: bold;
+}
+
+label {
+    line-height: 1.8;
+}
+
+form button[type="submit"] {
+    background-color: #ff69b4;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 20px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+form button[type="submit"]:hover {
+    background-color: #ff85c1;
+}
+
+/* =========================================
+   ENLACES
+   ========================================= */
+
+a {
+    color: #d63384;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   IMÁGENES BLOGGER
+   ========================================= */
+
+.separator {
+    clear: both;
+
+    padding: 1em 0;
+
+    text-align: center;
+}
+
+.separator img {
+    width: 320px;
+
+    max-width: 90%;
+
+    height: auto;
+
+    border-radius: 10px;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.footer {
+    background-color: #ff69b4;
+
+    color: white;
+
+    padding: 20px;
+
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.footer p {
+    margin: 5px 0;
+
+    font-size: 16px;
+
+    font-weight: 500;
+}
+
+/* =========================================
+   CONTADOR DE VISITAS
+   ========================================= */
+
+.contador {
+    font-size: 2em;
+    color: #2c3e50;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    .productos {
+        padding: 10px;
+    }
+
+    .producto {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    #carrito {
+        width: 100%;
+    }
+
+    form {
+        width: 100%;
+    }
+
+}
