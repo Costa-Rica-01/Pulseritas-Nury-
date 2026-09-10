@@ -74,7 +74,25 @@
 
     <!-- SUPABASE -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  const SUPABASE_URL = "https://plbntkaxosatljkbuciz.supabase.co";
+  const SUPABASE_KEY = "sb_publishable_JF9zGq0XslPiVH_FkdVjQg_zCR4cpTe";
+  const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+// Ejemplo: leer datos de la tabla "Pulseritas Nury"
+  async function leerPulseritas() {
+    const { data, error } = await supabase
+      .from("Pulseritas Nury")   // aquí va el nombre de tu tabla
+      .select("*");
 
+    if (error) {
+      console.error("Error:", error);
+    } else {
+      console.log("Datos:", data);
+    }
+  }
+
+  leerPulseritas();
+</script>
 </head>
 
 <body>
