@@ -1,3 +1,22 @@
+<script type="module">
+  import { createClient } from "https://plbntkaxosatljkbuciz.supabase.co";
+
+  const supabaseUrl = "https://plbntkaxosatljkbuciz.supabase.co";
+  const supabaseKey = "sb_publishable_JF9zGq0XslPiVH_FkdVjQg_zCR4cpTe";
+  const supabase = createClient(supabaseUrl, supabaseKey);
+
+  // Ejemplo: probar conexión
+  async function testConnection() {
+    const { data, error } = await supabase.from("tu_tabla").select("*");
+    if (error) {
+      console.error("Error:", error);
+    } else {
+      console.log("Datos:", data);
+    }
+  }
+
+  testConnection();
+</script>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
