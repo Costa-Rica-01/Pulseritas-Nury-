@@ -36,28 +36,7 @@
 </head>
 <body>
   <h1>Bienvenidos a Nuestra página web</h1>
-  <p class="contador">Has visitado esta página <span id="visitas">0</span> veces.</p>
-
-  <script>
-    // Obtener el número actual de visitas desde localStorage
-    let visitas = localStorage.getItem('contadorVisitas');
-
-    // Si no existe, inicializar en 1
-    if (!visitas) {
-      visitas = 1;
-    } else {
-      visitas = parseInt(visitas) + 1;
-    }
-
-    // Guardar el nuevo valor
-    localStorage.setItem('contadorVisitas', visitas);
-
-    // Mostrarlo en la página
-    document.getElementById('visitas').textContent = visitas;
-  </script>
-</body>
-</html>
-
+  
 <!DOCTYPE html>
 <html lang="es">
 
