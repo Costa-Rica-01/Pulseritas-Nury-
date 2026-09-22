@@ -1,43 +1,28 @@
 
+
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>página web Pulseritas Nury</title>
+  <title>Contador de Visitas</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       text-align: center;
       margin-top: 50px;
-      background-color:#ffe4e1;
-    }
-    h1 {
-      color:#ff69b4;
     }
     .contador {
       font-size: 2em;
       color: #2c3e50;
     }
-    .separator {
-      clear: both;
-      padding: 1em 0;
-      text-align: center;
-    }
-    .separator img {
-      border:0;
-      width:320px;
-    }
   </style>
 </head>
 <body>
-  <h1>Bienvenidos a Nuestra página web</h1>
+  <h1>Bienvenido a mi sitio</h1>
   <p class="contador">Has visitado esta página <span id="visitas">0</span> veces.</p>
-
-  <div class="separator">
-   
 
   <script>
     // Obtener el número actual de visitas desde localStorage
-    //let visitas = localStorage.getItem('contadorVisitas');
+    let visitas = localStorage.getItem('contadorVisitas');
 
     // Si no existe, inicializar en 1
     if (!visitas) {
@@ -52,6 +37,19 @@
     // Mostrarlo en la página
     document.getElementById('visitas').textContent = visitas;
   </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Página Web</title>
+</head>
+<body style="background-color:#ffe4e1; text-align:center; font-family:Arial, sans-serif;">
+  <h1 style="color:#ff69b4;">
+    Bienvenidos a Nuestra página web
+  </h1>
 </body>
 </html>
 

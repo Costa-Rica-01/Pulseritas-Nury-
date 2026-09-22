@@ -1,0 +1,11 @@
+const SUPABASE_URL = 'https://plbntkaxosatljkbuciz.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_JF9zGq0XslPiVH_FkdVjQg_zCR4cpTe';
+
+const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+ const {data, error} = await _supabase.select("hola").from(".")
+
+ if (error) {
+    console.error(error.message);
+ }
+
+ console.log(data);
