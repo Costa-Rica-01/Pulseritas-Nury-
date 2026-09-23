@@ -38,45 +38,7 @@
   <h1>Bienvenidos a Nuestra página web</h1>
   <html lang="es">
 <head>
-    <!-- contador de visitas -->
-  <meta charset="UTF-8">
-  <title>Contador de Visitas</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 50px;
-    }
-    .contador {
-      font-size: 2em;
-      color: #2c3e50;
-    }
-  </style>
-</head>
-<body>
-  <h1>Bienvenido a mi sitio</h1>
-  <p class="contador">Has visitado esta página <span id="visitas">0</span> veces.</p>
-
-  <script>
-    // Obtener el número actual de visitas desde localStorage
-    let visitas = localStorage.getItem('contadorVisitas');
-
-    // Si no existe, inicializar en 1
-    if (!visitas) {
-      visitas = 1;
-    } else {
-      visitas = parseInt(visitas) + 1;
-    }
-
-    // Guardar el nuevo valor
-    localStorage.setItem('contadorVisitas', visitas);
-
-    // Mostrarlo en la página
-    document.getElementById('visitas').textContent = visitas;
-  </script>
-</body>
-</html>
-<!-- contador de visitas -->
+  
 
 <!DOCTYPE html>
 <html lang="es">
